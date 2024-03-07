@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheshire</title>
+
+    <style>
+        #SpeekOutput
+        {
+            display: inline;
+        }
+    </style>
+
+    <script>
+        let SetupSpeechToText = function()
+        {
+            window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            let recognition = new SpeechRecognition();
+            recognition.interimResults = true;
+            recognition.addEventListener('result', e => {
+                const transcript = Array.from(e.results)
+                    .map(result => result[0])
+                    .map(result => result.transcript)
+                    .join('')
+                    document.getElementById("UserInput").value = transcript;
+            });
+            recognition.start();
+            recognition.addEventListener('end', recognition.start);
+        }
+
+        let RunTextToSpeech = function()
+        {
+            const speekOutput = window.document.getElementById("SpeekOutput").textContent;
+            let utterance = new SpeechSynthesisUtterance();
+            utterance.text = speekOutput;
+            utterance.voice = window.speechSynthesis.getVoices()[0]
+            utterance.onend = (event) => { SetupSpeechToText() };
+            window.speechSynthesis.speak(utterance)
+        }
+
+        let OnLoad = function()
+        {
+            RunTextToSpeech()
+        }
+        
+        window.onload = OnLoad;
+    </script>
+</head>
+<body>
+    <a href="https://www.verywellmind.com/the-myers-briggs-type-indicator-2795583" target="_blank">For more information about mbti emotions click here</a><br>
+    <a href="https://www.truity.com/enneagram/9-types-enneagram" target="_blank">For more information about enneagram emotions click here</a>
+    <p>Note: for best results use headphones.</p>
+    <form method="POST">
+        <label for="selectPersonality">Select Personality: </label>
+        <select name="selectPersonality" id="SelectPersonality">
+            <option value={{personalityType}}>{{personalityCategory}}{{personalityType}}</option>
+            <option value=""></option>
+            <option value="ISTJ">mbti: ISTJ</option>
+            <option value="ISFJ">mbti: ISFJ</option>
+            <option value="INFJ">mbti: INFJ</option>
+            <option value="INTJ">mbti: INTJ</option>
+            <option value="ISTP">mbti: ISTP</option>
+            <option value="ISFP">mbti: ISFP</option>
+            <option value="INFP">mbti: INFP</option>
+            <option value="INTP">mbti: INTP</option>
+            <option value="ESTP">mbti: ESTP</option>
+            <option value="ESFP">mbti: ESFP</option>
+            <option value="ENFP">mbti: ENFP</option>
+            <option value="ENTP">mbti: ENTP</option>
+            <option value="ESTJ">mbti: ESTJ</option>
+            <option value="ESFJ">mbti: ESFJ</option>
+            <option value="ENFJ">mbti: ENFJ</option>
+            <option value="ENTJ">mbti: ENTJ</option>
+            <option value="1">enneagram: 1</option>
+            <option value="2">enneagram: 2</option>
+            <option value="3">enneagram: 3</option>
+            <option value="4">enneagram: 4</option>
+            <option value="5">enneagram: 5</option>
+            <option value="6">enneagram: 6</option>
+            <option value="7">enneagram: 7</option>
+            <option value="8">enneagram: 8</option>
+            <option value="9">enneagram: 9</option>
+        </select>
+        <label for="userInput">User Input: </label>
+        <input name="userInput" id="UserInput">
+        <input type="Submit">
+        <p>user: {{userInput1}}</p>
+        <label for="bot 1">bot: </label><p name="bot 1" id="SpeekOutput">{{botOutput1}}</p>
+    </form>
+</body>
+</html>

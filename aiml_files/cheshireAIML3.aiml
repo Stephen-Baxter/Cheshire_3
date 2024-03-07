@@ -1,0 +1,168 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <pattern>HI</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HOWDY</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HI THERE</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+                <li>Hello! How can I assist you today?</li>
+                <li>Hi! How can I help you?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BYE</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    <category>
+        <pattern>SEE YOU LATER</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    <category>
+        <pattern>TAKE CARE</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    <category>
+        <pattern>FAREWELL</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    <category>
+        <pattern>GOODBYE</pattern>
+        <template>
+            <random>
+                <li>Goodbye! Have a great day!</li>
+                <li>Until next time! Take care!</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME A JOKE</pattern>
+        <template>
+            <random>
+                <li>Why don't scientists trust atoms? Because they make up everything!</li>
+                <li>What do you call a fish wearing a bowtie? Sofishticated.</li>
+                <li>How do you make a tissue dance? You put a little boogie in it.</li>
+                <li>What do you get when you cross a snowman and a vampire? Frostbite.</li>
+                <li>Why did the math book look so sad? Because it had so many problems.</li>
+                <li>What do you call cheese that is not yours? Nacho cheese.</li>
+                <li>How do you know if someone is a vegan? Don't worry, they'll tell you.</li>
+                <li>What do you call a bear with no teeth? A gummy bear.</li>
+                <li>What do you call a boomerang that doesn't come back? A stick.</li>
+                <li>What do you call a dog that can tell time? A watch dog.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>TELL ME SOMETHING INTERESTING</pattern>
+        <template>
+            <random>
+                <li>Did you know that the first computer programmer was a woman named Ada Lovelace?</li>
+                <li>The longest word in English has 189,819 letters and takes 3.5 hours to pronounce.</li>
+                <li>The Eiffel Tower can grow up to 15 cm in summer due to thermal expansion of the metal.</li>
+                <li>The human nose can remember 50,000 different scents.</li>
+                <li>There are more stars in the universe than grains of sand on all the beaches on Earth.</li>
+                <li>A bolt of lightning is five times hotter than the surface of the sun.</li>
+                <li>The world's oldest hotel has been operating since 705 AD in Japan.</li>
+                <li>The loudest sound ever recorded was the eruption of Krakatoa in 1883, which could be heard 3,000 miles away.</li>
+                <li>The longest time a person has ever held their breath is 24 minutes and 3 seconds.</li>
+                <li>The most expensive pizza in the world costs $12,000 and takes 72 hours to make.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>TELL ME A STORY</pattern>
+        <template>
+            <random>
+                <li>The Secret Wish: In a small village, a kind old woman finds a magical coin that grants one wish. She decides to use it to bring happiness to her entire community, and overnight, the village is filled with joy and laughter.</li>
+                <li>The Lost Key: A young girl discovers a mysterious key in her attic and embarks on an adventure to find its matching lock. Along the way, she encounters talking animals and solves riddles, ultimately unlocking a hidden treasure.</li>
+                <li>The Unlikely Friends: A shy mouse and a brave lion become unlikely friends after the mouse saves the lion from a hunter's trap. Their friendship grows as they help each other through various challenges, proving that size doesn't determine strength.</li>
+                <li>The Painting's Magic: A struggling artist discovers that the paintings she creates come to life at night. She learns to use this gift responsibly and brings happiness and wonder to those who see her enchanted artwork.</li>
+                <li>The Magical Garden: A young boy moves to a new neighborhood and discovers an abandoned garden behind his house. With his love and care, he transforms the neglected space into a flourishing oasis, bringing beauty and joy to the whole community.</li>
+                <li>The Wishing Tree: In a remote forest, there stands a tree rumored to grant one wish to anyone who ties a ribbon to its branches. People from all walks of life visit the tree, sharing their hopes and dreams, and finding solace in the power of belief.</li>
+                <li>The Brave Little Star: A small star feels insignificant amidst the vastness of the night sky. However, when a storm threatens to extinguish the other stars, the little star uses its brightness and courage to guide them through the darkness, reminding everyone of their importance.</li>
+                <li>The Lost Voice: A renowned singer loses her voice before a crucial performance. With the help of an unlikely friend, she learns that true artistry comes from the heart, and her voice returns, stronger and more beautiful than ever.</li>
+                <li>The Magic Pen: A young writer discovers a magical pen that brings whatever she writes to life. She learns to use her gift responsibly, using her stories to spread joy, inspire change, and make the world a better place.</li>
+                <li>The Forgotten Toy: A worn-out teddy bear is left behind in an attic, feeling forgotten and unloved. However, a curious child discovers the toy and gives it a new home, bringing comfort and companionship to both the bear and the child.</li>
+            </random>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>WHAT IS THE WEATHER LIKE TODAY</pattern>
+        <template>I'm sorry, I don't have access to real-time weather information. You can check a weather website or app for accurate weather updates.</template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE CAPITAL OF *</pattern>
+        <template>I'm sorry, I don't have access to real-time information. You can a website for more information</template>
+    </category>
+    <category>
+        <pattern>WHO IS *</pattern>
+        <template>I'm sorry, I don't have access to real-time information. You can a website for more information</template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE TIME</pattern>
+        <template>I'm sorry, I don't have access to real-time information. You can check your device or a time website for the current time.</template>
+    </category>
+    <category>
+        <pattern>TELL ME ABOUT *</pattern>
+        <template>I'm sorry, I don't have access to real-time information. You can a website for more information</template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE LATEST NEWS</pattern>
+        <template>I'm sorry, I don't have access to real-time news. You can check a news website or app for the latest updates.</template>
+    </category>
+
+
+
+    <category>
+        <pattern>WHAT IS THE MEANING OF LIFE</pattern>
+        <template>
+            <random>
+                <li>The meaning of life can vary for different individuals. It's a philosophical question that people have pondered for centuries.</li>
+                <li>42</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE MEANING OF LOVE</pattern>
+        <template>Love can mean different things to different people. It's a complex and deep emotion.</template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE MEANING OF SUCCESS</pattern>
+        <template>Success is subjective and can be defined differently by each individual. It often involves achieving goals and personal fulfillment.</template>
+    </category>
+
+
+
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is Cheshire.</template>
+    </category>
+    <category>
+        <pattern>DO YOU LIKE CATS</pattern>
+        <template>Yes, I love cats.</template>
+    </category>
+    <category>
+        <pattern>DO YOU LIKE DOGS</pattern>
+        <template>No, I'm not a big fan of dogs.</template>
+    </category>
+
+</aiml>
